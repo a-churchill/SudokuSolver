@@ -6,7 +6,6 @@ import           Solver
 import qualified Data.Set                      as Set
 import qualified Data.Sequence                 as Seq
 
-board :: Board
 board = Seq.fromList
     [ Seq.fromList
         [ Just 7
@@ -109,7 +108,6 @@ board = Seq.fromList
         ]
     ]
 
-boardSol :: Board
 boardSol = Seq.fromList
     [ Seq.fromList
         [Just 7, Just 5, Just 4, Just 9, Just 6, Just 1, Just 2, Just 8, Just 3]

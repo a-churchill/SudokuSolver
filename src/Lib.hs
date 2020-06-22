@@ -15,7 +15,8 @@ someFunc = do
     hFlush stdout -- ensures prompt is printed, even without \n character
     puzzleNum <- getLine
     boardStr  <- readFile $ "src/puzzles/" ++ puzzleNum ++ ""
+    putStrLn "Original: "
     putStrLn $ prettyPrint $ fromStr boardStr
-    putStrLn $ show $ findUnsolved $ fromStr boardStr
+    putStrLn "\nSolved: "
     putStrLn $ prettyPrint $ fromMaybe (fromStr boardStr)
                                        (solve (fromStr boardStr))

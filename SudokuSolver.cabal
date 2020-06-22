@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 5fd6551850eccc7f7b07364a0d6f9a95a7bba93b4ef079ea491950265b27a1bf
+-- hash: c778a221683c0c24f047075c8a202ab5d331b0c9d4db017bc5851197223ee876
 
 name:           SudokuSolver
 version:        0.1.0.0
@@ -39,6 +39,7 @@ library
     , base >=4.7 && <5
     , containers
     , hspec
+    , list-grouping
   default-language: Haskell2010
 
 executable SudokuSolver-exe
@@ -54,6 +55,7 @@ executable SudokuSolver-exe
     , base >=4.7 && <5
     , containers
     , hspec
+    , list-grouping
   default-language: Haskell2010
 
 test-suite SudokuSolver-test
@@ -70,4 +72,5 @@ test-suite SudokuSolver-test
     , base >=4.7 && <5
     , containers
     , hspec
+    , list-grouping
   default-language: Haskell2010

@@ -18,6 +18,10 @@ import qualified Data.Set                      as Set
 import           Data.Char
 import qualified Data.Foldable                 as Foldable
 import           Data.Maybe                     ( catMaybes )
+import           Data.List                      ( intersperse
+                                                , intercalate
+                                                )
+import           Data.List.Grouping             ( splitEvery )
 
 boardDimension :: Int
 boardDimension = 9
@@ -50,6 +54,8 @@ getColValues board (_, c) = Set.fromList $ catMaybes $ Foldable.toList $ fmap
   (\row -> Seq.index row c)
   board
 
+-- gets corner of square; {0, 1, 2} -> 0, {3, 4, 5} -> 3, {6, 7, 8} -> 6 
+-- for a 9x9 grid
 floorSquareLoc :: Int -> Int
 floorSquareLoc x = x - (x `mod` boardSquareDimension)
 
@@ -91,10 +97,17 @@ set board (r, c) val =
 {- PRINTING -}
 
 hSeparator :: [Char]
-hSeparator = " " ++ replicate (1 + (boardDimension * 4)) '-' ++ "\n"
+hSeparator = " " ++ replicate (5 + (boardDimension * 4)) '-' ++ "\n"
 
-vSeparator :: [Char]
-vSeparator = " | "
+hSeparator' :: [Char]
+hSeparator' = " " ++ replicate (5 + (boardDimension * 4)) '=' ++ "\n"
+
+
+vSeparator :: Char
+vSeparator = '|'
+
+vSeparator' :: [Char]
+vSeparator' = " || "
 
 prettyPrintChar :: Maybe Int -> String
 prettyPrintChar Nothing  = " "
@@ -102,11 +115,14 @@ prettyPrintChar (Just c) = show c
 
 prettyPrintLine :: Row -> String
 prettyPrintLine row =
-  vSeparator ++ foldr (addSeparator vSeparator prettyPrintChar) "" row ++ "\n"
-
-addSeparator :: String -> (a -> String) -> a -> String -> String
-addSeparator sep toStr x rest = toStr x ++ sep ++ rest
+  let text  = concat (fmap prettyPrintChar row)
+      rows  = splitEvery boardSquareDimension text
+      rows' = map (intersperse ' ' . intersperse vSeparator) rows
+  in  concat [vSeparator', intercalate vSeparator' rows', vSeparator', "\n"]
 
 prettyPrint :: Board -> String
-prettyPrint b =
-  hSeparator ++ foldr (addSeparator hSeparator prettyPrintLine) "" b
+prettyPrint board =
+  let lines       = Foldable.toList (fmap prettyPrintLine board)
+      lineGroups  = splitEvery boardSquareDimension lines
+      lineGroups' = map (concat . intersperse hSeparator) lineGroups
+  in  concat [hSeparator', intercalate hSeparator' lineGroups', hSeparator']
