@@ -1,0 +1,13 @@
+cradle:
+  stack:
+    - path: "./src"
+      component: "SudokuSolver:lib"
+
+    - path: "./app/Main.hs"
+      component: "SudokuSolver:exe:SudokuSolver-exe"
+
+    - path: "./app/Paths_SudokuSolver.hs"
+      component: "SudokuSolver:exe:SudokuSolver-exe"
+
+    - path: "./test"
+      component: "SudokuSolver:test:SudokuSolver-test"
