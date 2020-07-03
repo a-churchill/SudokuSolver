@@ -173,6 +173,125 @@ main = hspec $ do
         it "returns correct values at (5, 2)" $ do
             getValidValues board (5, 2) `shouldBe` Set.fromList [2, 7, 8, 9]
     describe "Solver.solve" $ do
+        it "returns solution for board 1" $ do
+            boardStr    <- readFile $ "src/puzzles/1"
+            boardSolStr <- readFile $ "src/puzzles/1_sol"
+            solve (fromStr boardStr) `shouldBe` Just (fromStr boardSolStr)
+        it "returns solution for board 2" $ do
+            boardStr    <- readFile $ "src/puzzles/2"
+            boardSolStr <- readFile $ "src/puzzles/2_sol"
+            solve (fromStr boardStr) `shouldBe` Just (fromStr boardSolStr)
         it "returns solution for board 3" $ do
-            solve board `shouldBe` Just (boardSol)
+            boardStr    <- readFile $ "src/puzzles/3"
+            boardSolStr <- readFile $ "src/puzzles/3_sol"
+            solve (fromStr boardStr) `shouldBe` Just (fromStr boardSolStr)
+        it "returns solution for board 4" $ do
+            boardStr    <- readFile $ "src/puzzles/4"
+            boardSolStr <- readFile $ "src/puzzles/4_sol"
+            solve (fromStr boardStr) `shouldBe` Just (fromStr boardSolStr)
+        it "returns solution for board 5" $ do
+            boardStr    <- readFile $ "src/puzzles/5"
+            boardSolStr <- readFile $ "src/puzzles/5_sol"
+            solve (fromStr boardStr) `shouldBe` Just (fromStr boardSolStr)
+        it "returns solution for board 6" $ do
+            boardStr    <- readFile $ "src/puzzles/6"
+            boardSolStr <- readFile $ "src/puzzles/6_sol"
+            solve (fromStr boardStr) `shouldBe` Just (fromStr boardSolStr)
+        it "returns solution for board 7" $ do
+            boardStr    <- readFile $ "src/puzzles/7"
+            boardSolStr <- readFile $ "src/puzzles/7_sol"
+            solve (fromStr boardStr) `shouldBe` Just (fromStr boardSolStr)
+        it "returns solution for board 8" $ do
+            boardStr    <- readFile $ "src/puzzles/8"
+            boardSolStr <- readFile $ "src/puzzles/8_sol"
+            solve (fromStr boardStr) `shouldBe` Just (fromStr boardSolStr)
+        it "returns solution for board 9" $ do
+            boardStr    <- readFile $ "src/puzzles/9"
+            boardSolStr <- readFile $ "src/puzzles/9_sol"
+            solve (fromStr boardStr) `shouldBe` Just (fromStr boardSolStr)
+        it "returns solution for board 10" $ do
+            boardStr    <- readFile $ "src/puzzles/10"
+            boardSolStr <- readFile $ "src/puzzles/10_sol"
+            solve (fromStr boardStr) `shouldBe` Just (fromStr boardSolStr)
+        it "returns solution for board 11" $ do
+            boardStr    <- readFile $ "src/puzzles/11"
+            boardSolStr <- readFile $ "src/puzzles/11_sol"
+            solve (fromStr boardStr) `shouldBe` Just (fromStr boardSolStr)
+        it "returns solution for board 12" $ do
+            boardStr    <- readFile $ "src/puzzles/12"
+            boardSolStr <- readFile $ "src/puzzles/12_sol"
+            solve (fromStr boardStr) `shouldBe` Just (fromStr boardSolStr)
+        it "returns solution for board 13" $ do
+            boardStr    <- readFile $ "src/puzzles/13"
+            boardSolStr <- readFile $ "src/puzzles/13_sol"
+            solve (fromStr boardStr) `shouldBe` Just (fromStr boardSolStr)
+        it "returns solution for board 14" $ do
+            boardStr    <- readFile $ "src/puzzles/14"
+            boardSolStr <- readFile $ "src/puzzles/14_sol"
+            solve (fromStr boardStr) `shouldBe` Just (fromStr boardSolStr)
+        it "returns solution for board 15" $ do
+            boardStr    <- readFile $ "src/puzzles/15"
+            boardSolStr <- readFile $ "src/puzzles/15_sol"
+            solve (fromStr boardStr) `shouldBe` Just (fromStr boardSolStr)
+        it "returns solution for board 16" $ do
+            boardStr    <- readFile $ "src/puzzles/16"
+            boardSolStr <- readFile $ "src/puzzles/16_sol"
+            solve (fromStr boardStr) `shouldBe` Just (fromStr boardSolStr)
+        it "returns solution for board 17" $ do
+            boardStr    <- readFile $ "src/puzzles/17"
+            boardSolStr <- readFile $ "src/puzzles/17_sol"
+            solve (fromStr boardStr) `shouldBe` Just (fromStr boardSolStr)
+        it "returns solution for board 18" $ do
+            boardStr    <- readFile $ "src/puzzles/18"
+            boardSolStr <- readFile $ "src/puzzles/18_sol"
+            solve (fromStr boardStr) `shouldBe` Just (fromStr boardSolStr)
+        it "returns solution for board 19" $ do
+            boardStr    <- readFile $ "src/puzzles/19"
+            boardSolStr <- readFile $ "src/puzzles/19_sol"
+            solve (fromStr boardStr) `shouldBe` Just (fromStr boardSolStr)
+        it "returns solution for board 20" $ do
+            boardStr    <- readFile $ "src/puzzles/20"
+            boardSolStr <- readFile $ "src/puzzles/20_sol"
+            solve (fromStr boardStr) `shouldBe` Just (fromStr boardSolStr)
+        it "returns solution for board 21" $ do
+            boardStr    <- readFile $ "src/puzzles/21"
+            boardSolStr <- readFile $ "src/puzzles/21_sol"
+            solve (fromStr boardStr) `shouldBe` Just (fromStr boardSolStr)
+        it "returns solution for board 22" $ do
+            boardStr    <- readFile $ "src/puzzles/22"
+            boardSolStr <- readFile $ "src/puzzles/22_sol"
+            solve (fromStr boardStr) `shouldBe` Just (fromStr boardSolStr)
+        it "returns solution for board 23" $ do
+            boardStr    <- readFile $ "src/puzzles/23"
+            boardSolStr <- readFile $ "src/puzzles/23_sol"
+            solve (fromStr boardStr) `shouldBe` Just (fromStr boardSolStr)
+        it "returns solution for board 24" $ do
+            boardStr    <- readFile $ "src/puzzles/24"
+            boardSolStr <- readFile $ "src/puzzles/24_sol"
+            solve (fromStr boardStr) `shouldBe` Just (fromStr boardSolStr)
+        it "returns solution for board 25" $ do
+            boardStr    <- readFile $ "src/puzzles/25"
+            boardSolStr <- readFile $ "src/puzzles/25_sol"
+            solve (fromStr boardStr) `shouldBe` Just (fromStr boardSolStr)
+        it "returns solution for board 26" $ do
+            boardStr    <- readFile $ "src/puzzles/26"
+            boardSolStr <- readFile $ "src/puzzles/26_sol"
+            solve (fromStr boardStr) `shouldBe` Just (fromStr boardSolStr)
+        it "returns solution for board 27" $ do
+            boardStr    <- readFile $ "src/puzzles/27"
+            boardSolStr <- readFile $ "src/puzzles/27_sol"
+            solve (fromStr boardStr) `shouldBe` Just (fromStr boardSolStr)
+        it "returns solution for board 28" $ do
+            boardStr    <- readFile $ "src/puzzles/28"
+            boardSolStr <- readFile $ "src/puzzles/28_sol"
+            solve (fromStr boardStr) `shouldBe` Just (fromStr boardSolStr)
+        it "returns solution for board 29" $ do
+            boardStr    <- readFile $ "src/puzzles/29"
+            boardSolStr <- readFile $ "src/puzzles/29_sol"
+            solve (fromStr boardStr) `shouldBe` Just (fromStr boardSolStr)
+        it "returns solution for board 30" $ do
+            boardStr    <- readFile $ "src/puzzles/30"
+            boardSolStr <- readFile $ "src/puzzles/30_sol"
+            solve (fromStr boardStr) `shouldBe` Nothing
+
 

@@ -387,3 +387,4 @@ Number of Box/Line Intersections: 0
 Number of Guesses: 0
 Number of Backtracks: 0
 Difficulty: Intermediate
+Note: modified to make this impossible in file `30`

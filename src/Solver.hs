@@ -6,7 +6,6 @@ import qualified Data.Sequence                 as Seq
 import           Data.Ord                       ( comparing )
 import           Data.Maybe
 import           Data.List                      ( minimumBy )
-import           Debug.Trace                    ( traceShowId )
 
 solve :: Board -> Maybe Board
 solve board =
